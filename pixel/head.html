@@ -15,7 +15,11 @@
       searchInput.setAttribute("readonly", "readonly");
       setTimeout(() => {
         searchInput.removeAttribute("readonly");
-        var a = getElementBySelector(".vtex-store-components-3-x-resultsItem");
+        // var a = getElementBySelector(".vtex-store-components-3-x-resultsItem");
+        // a.click();
+        var inputValue = searchInput.value?.toLowerCase();
+        var a = document.createElement('a');
+        a.href = '/' + inputValue + '?map=ft';
         a.click();
       }, 2000);
     }
